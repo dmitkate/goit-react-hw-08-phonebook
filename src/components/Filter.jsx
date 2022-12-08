@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { setNameFilter } from 'redux/filterslice';
+import { setNameFilter } from '../redux/contacts/filterslice';
 function Find() {
   const dispatch = useDispatch();
   //const filter = useSelector(state => state.filter);

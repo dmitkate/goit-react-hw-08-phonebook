@@ -1,9 +1,9 @@
 import css from '../components/formin.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import React from 'react';
-import { addContacts } from 'redux/operation';
+import { addContacts } from '../redux/contacts/operation';
 import { Formik, Form, Field } from 'formik';
-import { selectContacts } from 'redux/selectors';
+import { selectContacts } from '../redux/contacts/selectors';
 
 export function FormIn() {
   const dispatch = useDispatch();
