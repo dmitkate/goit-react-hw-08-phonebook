@@ -1,4 +1,16 @@
-import { useDispatch, useSelector} from 'react-redux';
+import {
+  Button,
+  Wrap,
+  useToast,
+  Avatar,
+  AvatarBadge,
+  Center,
+  Divider,
+  Tag,
+  TagLabel,
+} from '@chakra-ui/react';
+
+import { useDispatch, useSelector } from 'react-redux';
 import {getUsername} from '../redux/auth/auth-selectors';
 import authOperations from '../redux/auth/auth-operations';
 
@@ -15,6 +27,18 @@ const styles = {
     fontWeight: 700,
     marginRight: 12,
   },
+   badge: {
+    bg: 'gray.500',
+    border: '2px solid',
+  },
+  containerAvatar: {
+    borderRadius: 'xl',
+  },
+  excessLabel: {
+    bg: 'gray.800',
+    color: 'white',
+    borderRadius: 'xl',
+  },
 };
 
 export default function UserMenu() {
@@ -23,12 +47,12 @@ export default function UserMenu() {
 
 
   return (
-    <div style={styles.container}>
-
-      <span style={styles.name}>Добро пожаловать, {name} </span> 
-       <button type="button" onClick={() => dispatch(authOperations.logOut())}>  
-      log out
-      </button>
+  <div style={styles.container}>
+   <Avatar m='5px' bg='teal' name={name} src='https://bit.ly/broken-link' />
+      <span style={styles.name}>Welcome, {name} </span> 
+       <Button type="button" onClick={() => dispatch(authOperations.logOut())}>  
+      LOGOUT
+      </Button>
     </div>
   );
 }

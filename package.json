@@ -4,6 +4,10 @@
   "private": true,
   "homepage": "https://dmitkate.github.io/goit-react-hw-08-phonebook/",
   "dependencies": {
+    "@chakra-ui/icons": "^2.0.13",
+    "@chakra-ui/react": "^2.4.3",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
     "@reduxjs/toolkit": "^1.9.1",
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
@@ -11,6 +15,7 @@
     "axios": "^1.2.0",
     "browser-router": "^0.2.0",
     "formik": "^2.2.9",
+    "framer-motion": "^7.6.19",
     "notiflix": "^3.2.5",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",

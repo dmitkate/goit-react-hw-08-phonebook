@@ -18,7 +18,7 @@ const Navigation = () => (
       // exact
       style={styles.link}
    >
-      Главная
+     HOME
     </Link>
 
     <Link
@@ -27,7 +27,7 @@ const Navigation = () => (
       style={styles.link}
       
     >
-      Заметки
+      CONTACTS
     </Link>
     <Outlet />
   </nav>

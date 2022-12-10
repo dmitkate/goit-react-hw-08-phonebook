@@ -4,6 +4,8 @@ import Navigation from './Navigation';
 import UserMenu from './UserMenu';
 import { getIsLoggedIn }  from '../redux/auth/auth-selectors';
 
+
+
 const styles = {
   header: {
     display: 'flex',
@@ -18,9 +20,7 @@ export default function AppBar() {
     <header style={styles.header}>
       <Navigation />
       {isLoggedIn ?  <UserMenu /> : <AuthNav />  }
-      
-      
-    
+
     </header>
   );
 }

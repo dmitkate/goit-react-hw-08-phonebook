@@ -6,6 +6,8 @@ import Find from 'components/Filter';
 import { FormIn } from 'components/Formin';
 import { fetchContacts } from '../redux/contacts/operation';
 import { selectIsLoading, selectError } from '../redux/contacts/selectors';
+
+import { Spinner } from '@chakra-ui/react';
 function ContactsView() {
 
     const isLoading = useSelector(selectIsLoading);
@@ -20,9 +22,16 @@ function ContactsView() {
 
   return (<>
     <FormIn />
-    <h2>Contacts:</h2>
+
     <Find />
-    {isLoading && <b>Loading tasks...</b>}
+    {isLoading && <Spinner
+  
+    thickness='4px'
+    peed='0.65s'
+    emptyColor='gray.200'
+    color='blue.500'
+    size='xl'
+/>}
     {isError && <b>{isError}</b>}
     <ContactList />
   </>

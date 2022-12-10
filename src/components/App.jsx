@@ -1,7 +1,8 @@
+import { Spinner } from '@chakra-ui/react';
 import { useDispatch } from 'react-redux';
 import { useEffect, lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
-
+import { Box } from '@chakra-ui/react';
 import { useUser } from 'hooks/hooks';
 
 import authOperations from 'redux/auth/auth-operations';
@@ -24,11 +25,27 @@ export default function App() {
   }, [dispatch]);
 
   return isRefreshing ? (
-    <b>Refreshing user...</b>
+    <Spinner
+      thickness="4px"
+      speed="0.65s"
+      emptyColor="gray.200"
+      color="blue.500"
+      size="xl"
+    />
   ) : (
-    <>
+    <Box padding={4}>
       <AppBar />
-      <Suspense fallback={<p>Загружаем...</p>}>
+      <Suspense
+        fallback={
+          <Spinner
+            thickness="4px"
+            speed="0.65s"
+            emptyColor="gray.200"
+            color="blue.500"
+            size="xl"
+          />
+        }
+      >
         <Routes>
           <Route index element={<HomeView />} />
           <Route
@@ -55,6 +72,6 @@ export default function App() {
           <Route path="*" component={<NotFound />} />
         </Routes>
       </Suspense>
-    </>
+    </Box>
   );
 }
