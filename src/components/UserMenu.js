@@ -1,13 +1,8 @@
 import {
   Button,
-  Wrap,
-  useToast,
+
   Avatar,
-  AvatarBadge,
-  Center,
-  Divider,
-  Tag,
-  TagLabel,
+
 } from '@chakra-ui/react';
 
 import { useDispatch, useSelector } from 'react-redux';
